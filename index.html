@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кирилл Кондаков — портфолио</title>
+<style>
+  :root{
+    --font: "Vogue Highline Sans", -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    --serif: "Quincy CF", Georgia, "Times New Roman", serif;
+    --ink:#1d1d1f; --ink-2:#424245; --grey:#6e6e73; --grey-2:#86868b;
+    --line:#d2d2d7; --bg:#f5f5f7; --soft:#e8e8ed; --white:#fff;
+    --blue:#0071e3; --blue-soft:#e8f1fd; --bar-before:#c7c7cc;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:var(--font);color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;letter-spacing:0;font-synthesis:none;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 40px;}
+  section{padding:64px 0;}
+  section.alt{background:var(--bg);}
+
+  .eyebrow{font-size:14px;font-weight:600;color:var(--blue);margin-bottom:10px;}
+  h1{font-family:var(--serif);font-size:80px;font-weight:100;letter-spacing:-.01em;line-height:1.02;}
+  h2{font-family:var(--serif);font-size:48px;font-weight:100;letter-spacing:-.01em;line-height:1.08;}
+  .role{font-size:22px;font-weight:600;margin:16px 0 6px;}
+  .role span{color:var(--grey);font-weight:500;}
+  .lead{font-size:19px;color:var(--grey);font-weight:500;}
+  .contacts{display:flex;flex-wrap:wrap;gap:8px 24px;font-size:15px;color:var(--grey);margin-top:28px;}
+  .contacts a{color:var(--blue);text-decoration:none;}
+
+  .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:40px;}
+  .kpi{background:var(--white);border-radius:20px;padding:24px 22px;}
+  .kpi-v{white-space:nowrap;font-size:30px;font-weight:700;letter-spacing:-.03em;line-height:1.05;color:var(--blue);}
+  .kpi-v small{font-size:20px;color:var(--grey-2);font-weight:600;}
+  .kpi-k{font-size:13.5px;color:var(--grey);margin-top:10px;line-height:1.35;}
+
+  .jobs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px;}
+  .job{background:var(--bg);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:4px;}
+  .job-co{font-size:22px;font-weight:700;letter-spacing:-.02em;}
+  .job-role{font-size:14.5px;color:var(--ink-2);font-weight:500;}
+  .job-meta{font-size:13.5px;color:var(--grey-2);margin-bottom:12px;}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;}
+  .chip{background:var(--white);border-radius:980px;padding:6px 13px;font-size:13.5px;font-weight:600;color:var(--ink);}
+  .chip.b{background:var(--blue-soft);color:var(--blue);}
+  .job .chips{flex-direction:column;align-items:flex-start;}
+  .alt .tags .chip{background:var(--white);}
+  section:not(.alt) .tags .chip{background:var(--bg);}
+
+  .case-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:22px;}
+  .tags{display:flex;gap:6px;flex-wrap:wrap;}
+  .task{display:flex;gap:14px;align-items:center;border-radius:16px;padding:16px 20px;margin-bottom:12px;font-size:18px;font-weight:600;background:var(--bg);}
+  .alt .task{background:var(--white);}
+  .label{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);min-width:80px;}
+
+  .grid{display:grid;gap:12px;}
+  .g2{grid-template-columns:1fr 1fr;}
+  .g3{grid-template-columns:repeat(3,1fr);}
+  .g4{grid-template-columns:repeat(4,1fr);}
+  .card{background:var(--bg);border-radius:20px;padding:22px;}
+  .alt .card{background:var(--white);}
+  .card h4{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--grey);margin-bottom:12px;}
+  .big{font-size:46px;font-weight:700;letter-spacing:-.035em;line-height:1;color:var(--blue);}
+  .big.ink{color:var(--ink);}
+  .cap{font-size:14px;color:var(--grey);margin-top:8px;line-height:1.4;}
+
+  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:12px;}
+  .steps.s4{grid-template-columns:repeat(4,1fr);}
+  .steps.s3{grid-template-columns:repeat(3,1fr);}
+  .step{background:var(--bg);border-radius:16px;padding:18px;}
+  .alt .step{background:var(--white);}
+  .step-n{width:26px;height:26px;border-radius:50%;background:var(--soft);color:var(--ink);font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-bottom:10px;}
+  .step b{display:block;font-size:15.5px;margin-bottom:4px;}
+  .step p{font-size:13.5px;color:var(--grey);line-height:1.42;}
+  .step .hl{display:inline-block;margin-top:8px;font-size:13.5px;font-weight:700;color:var(--blue);}
+
+  svg{display:block;width:100%;height:auto;}
+  .t-label{font-size:13px;fill:#6e6e73;font-family:var(--font);}
+  .t-val{font-size:15px;font-weight:700;font-family:var(--font);}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--grey);margin-top:10px;}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px;}
+
+  footer{padding:28px 0 40px;color:var(--grey);font-size:13px;border-top:1px solid var(--line);}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+  footer a{color:var(--blue);text-decoration:none;}
+
+  @media (max-width:900px){
+    h1{font-size:52px;} h2{font-size:32px;}
+    .kpis,.jobs,.g3,.g4,.steps,.steps.s4,.steps.s3{grid-template-columns:1fr 1fr;}
+    .big{font-size:38px;}
+  }
+  @media (max-width:560px){
+    .wrap{padding:0 16px;} section{padding:44px 0;}
+    h1{font-size:40px;}
+    .kpis,.jobs,.g2,.g3,.g4,.steps,.steps.s4,.steps.s3{grid-template-columns:1fr;}
+    .task{flex-direction:column;align-items:flex-start;gap:4px;font-size:16px;}
+    .two-third{grid-template-columns:1fr !important;}
+  }
+  @media print{ section{break-inside:avoid;} section.alt,.card,.kpi,.step,.job{-webkit-print-color-adjust:exact;print-color-adjust:exact;} }
+</style>
+</head>
+<body>
+
+<!-- 1. Обложка -->
+<section class="alt">
+  <div class="wrap">
+    <div class="eyebrow">Портфолио</div>
+    <h1>Кирилл Кондаков</h1>
+    <div class="role">Performance Manager <span>— Google Ads, Meta, TikTok · AI-аналитика и оптимизация</span></div>
+    <p class="lead">11+ лет в digital-маркетинге · 9+ лет в user acquisition</p>
+
+    <div class="kpis">
+      <div class="kpi"><div class="kpi-v">0,87 <small>→</small> 3,98</div><div class="kpi-k">ROAS Google Ads, 12 STOREEZ<br>дек 2025 → окт 2026</div></div>
+      <div class="kpi"><div class="kpi-v">89% <small>→</small> 25%</div><div class="kpi-k">ДРР Google Ads<br>12 STOREEZ, ОАЭ</div></div>
+      <div class="kpi"><div class="kpi-v">222% <small>→</small> 24,6%</div><div class="kpi-k">ДРР Tanuki Казахстан<br>фев — дек 2025</div></div>
+      <div class="kpi"><div class="kpi-v">+290%</div><div class="kpi-k">GMV за 12 месяцев<br>OAOK, маркетплейс</div></div>
+    </div>
+
+    <div class="contacts">
+      <a href="https://t.me/kirill_kondakov">Telegram @kirill_kondakov</a>
+      <a href="mailto:171kondakov@gmail.com">171kondakov@gmail.com</a>
+      <span>Удалённо · по МСК</span>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Опыт -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Опыт</div>
+    <div class="jobs">
+      <div class="job">
+        <div class="job-co">12 STOREEZ</div>
+        <div class="job-role">Senior Performance Marketing Manager</div>
+        <div class="job-meta">дек 2025 — сейчас · Fashion e-com · ОАЭ, Кувейт, Казахстан, Узбекистан</div>
+        <div class="chips"><span class="chip b">ROAS 0,87 → 3,98</span><span class="chip">Выручка г/г +51%</span><span class="chip">Google · Meta · TikTok</span></div>
+      </div>
+      <div class="job">
+        <div class="job-co">TanukiFamily</div>
+        <div class="job-role">Senior Performance Marketing Manager</div>
+        <div class="job-meta">дек 2024 — дек 2025 · Доставка еды · Казахстан, Узбекистан</div>
+        <div class="chips"><span class="chip b">ДРР 222% → 24,6%</span><span class="chip">Платные заказы 3% → 19%</span><span class="chip">Meta · Google · TikTok</span></div>
+      </div>
+      <div class="job">
+        <div class="job-co">OAOK</div>
+        <div class="job-role">Head of Digital Marketing</div>
+        <div class="job-meta">июл 2022 — ноя 2024 · маркетплейс 3D-моделей</div>
+        <div class="chips"><span class="chip b">GMV +290%</span><span class="chip">Продажи ×5</span><span class="chip">CPL −83%</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Кейс 1 — Google Ads -->
+<section class="alt">
+  <div class="wrap">
+    <div class="case-head">
+      <div><div class="eyebrow">Кейс 1 · 12 STOREEZ</div><h2>Google Ads: ROAS 0,87 → 3,98</h2></div>
+      <div class="tags"><span class="chip">Performance Max</span><span class="chip">Fashion e-com</span><span class="chip">ОАЭ</span><span class="chip">Кувейт</span></div>
+    </div>
+
+    <div class="task"><span class="label">Задача</span>Целевой показатель — ROAS не ниже 3</div>
+
+<!--CHART:google_drr-->
+    <div class="card">
+      <h4>ДРР Google Ads по месяцам</h4>
+      <svg viewBox="0 0 960 240" aria-label="ДРР Google Ads по месяцам: дек 2025 115%; янв 2026 80%; фев 2026 88%; мар 2026 87%; апр 2026 20%; май 2026 41%; июн 2026 44%; июл 2026 40%; авг 2026 46%; сен 2026 43%; окт 2026 25%">
+        <line x1="20" y1="194" x2="940" y2="194" stroke="#d2d2d7"/>
+        <line x1="30.0" y1="16" x2="30.0" y2="194" stroke="#86868b" stroke-dasharray="4 4"/>
+        <text x="36.0" y="26" class="t-label" font-size="12">старт работы</text>
+        <line x1="390.0" y1="16" x2="390.0" y2="194" stroke="#86868b" stroke-dasharray="4 4"/>
+        <text x="396.0" y="26" class="t-label" font-size="12">веду рекламу сам</text>
+        <polyline fill="none" stroke="#0071e3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" points="30.0,59.5 120.0,100.4 210.0,91.0 300.0,92.2 390.0,170.6 480.0,146.0 570.0,142.5 660.0,147.2 750.0,140.2 840.0,143.7 930.0,164.8"/>
+        <circle cx="30.0" cy="59.5" r="3.5" fill="#0071e3"/>
+        <text x="30.0" y="49.5" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">115%</text>
+        <text x="30.0" y="216" text-anchor="middle" class="t-label" font-size="12">дек</text>
+        <text x="30.0" y="232" text-anchor="middle" class="t-label" font-size="11" fill="#86868b">2025</text>
+        <circle cx="120.0" cy="100.4" r="3.5" fill="#0071e3"/>
+        <text x="120.0" y="120.4" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">80%</text>
+        <text x="120.0" y="216" text-anchor="middle" class="t-label" font-size="12">янв</text>
+        <text x="120.0" y="232" text-anchor="middle" class="t-label" font-size="11" fill="#86868b">2026</text>
+        <circle cx="210.0" cy="91.0" r="3.5" fill="#0071e3"/>
+        <text x="210.0" y="81.0" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">88%</text>
+        <text x="210.0" y="216" text-anchor="middle" class="t-label" font-size="12">фев</text>
+        <circle cx="300.0" cy="92.2" r="3.5" fill="#0071e3"/>
+        <text x="300.0" y="82.2" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">87%</text>
+        <text x="300.0" y="216" text-anchor="middle" class="t-label" font-size="12">мар</text>
+        <circle cx="390.0" cy="170.6" r="3.5" fill="#0071e3"/>
+        <text x="390.0" y="160.6" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">20%</text>
+        <text x="390.0" y="216" text-anchor="middle" class="t-label" font-size="12">апр</text>
+        <circle cx="480.0" cy="146.0" r="3.5" fill="#0071e3"/>
+        <text x="480.0" y="136.0" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">41%</text>
+        <text x="480.0" y="216" text-anchor="middle" class="t-label" font-size="12">май</text>
+        <circle cx="570.0" cy="142.5" r="3.5" fill="#0071e3"/>
+        <text x="570.0" y="132.5" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">44%</text>
+        <text x="570.0" y="216" text-anchor="middle" class="t-label" font-size="12">июн</text>
+        <circle cx="660.0" cy="147.2" r="3.5" fill="#0071e3"/>
+        <text x="660.0" y="137.2" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">40%</text>
+        <text x="660.0" y="216" text-anchor="middle" class="t-label" font-size="12">июл</text>
+        <circle cx="750.0" cy="140.2" r="3.5" fill="#0071e3"/>
+        <text x="750.0" y="130.2" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">46%</text>
+        <text x="750.0" y="216" text-anchor="middle" class="t-label" font-size="12">авг</text>
+        <circle cx="840.0" cy="143.7" r="3.5" fill="#0071e3"/>
+        <text x="840.0" y="133.7" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">43%</text>
+        <text x="840.0" y="216" text-anchor="middle" class="t-label" font-size="12">сен</text>
+        <circle cx="930.0" cy="164.8" r="4.5" fill="#0071e3"/>
+        <text x="930.0" y="154.8" text-anchor="middle" class="t-val" font-size="12" fill="#0071e3">25%</text>
+        <text x="930.0" y="216" text-anchor="middle" class="t-label" font-size="12">окт</text>
+      </svg>
+    </div>
+<!--/CHART:google_drr-->
+<!--CHART:google_roas-->
+    <div class="card" style="margin-top:12px;">
+      <h4>ROAS Google Ads по месяцам</h4>
+      <svg viewBox="0 0 960 240" aria-label="ROAS Google Ads по месяцам: дек 2025 0,87; янв 2026 1,25; фев 2026 1,13; мар 2026 1,15; апр 2026 5,07; май 2026 2,43; июн 2026 2,27; июл 2026 2,51; авг 2026 2,16; сен 2026 2,31; окт 2026 3,98">
+        <line x1="20" y1="194" x2="940" y2="194" stroke="#d2d2d7"/>
+        <line x1="30.0" y1="16" x2="30.0" y2="194" stroke="#86868b" stroke-dasharray="4 4"/>
+        <text x="36.0" y="26" class="t-label" font-size="12">старт работы</text>
+        <line x1="390.0" y1="16" x2="390.0" y2="194" stroke="#86868b" stroke-dasharray="4 4"/>
+        <text x="396.0" y="26" class="t-label" font-size="12">веду рекламу сам</text>
+        <polyline fill="none" stroke="#0071e3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" points="30.0,170.9 120.0,160.8 210.0,164.0 300.0,163.5 390.0,59.5 480.0,129.5 570.0,133.8 660.0,127.4 750.0,136.7 840.0,132.7 930.0,88.4"/>
+        <circle cx="30.0" cy="170.9" r="3.5" fill="#0071e3"/>
+        <text x="30.0" y="160.9" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">0,87</text>
+        <text x="30.0" y="216" text-anchor="middle" class="t-label" font-size="12">дек</text>
+        <text x="30.0" y="232" text-anchor="middle" class="t-label" font-size="11" fill="#86868b">2025</text>
+        <circle cx="120.0" cy="160.8" r="3.5" fill="#0071e3"/>
+        <text x="120.0" y="150.8" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">1,25</text>
+        <text x="120.0" y="216" text-anchor="middle" class="t-label" font-size="12">янв</text>
+        <text x="120.0" y="232" text-anchor="middle" class="t-label" font-size="11" fill="#86868b">2026</text>
+        <circle cx="210.0" cy="164.0" r="3.5" fill="#0071e3"/>
+        <text x="210.0" y="154.0" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">1,13</text>
+        <text x="210.0" y="216" text-anchor="middle" class="t-label" font-size="12">фев</text>
+        <circle cx="300.0" cy="163.5" r="3.5" fill="#0071e3"/>
+        <text x="300.0" y="183.5" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">1,15</text>
+        <text x="300.0" y="216" text-anchor="middle" class="t-label" font-size="12">мар</text>
+        <circle cx="390.0" cy="59.5" r="3.5" fill="#0071e3"/>
+        <text x="390.0" y="49.5" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">5,07</text>
+        <text x="390.0" y="216" text-anchor="middle" class="t-label" font-size="12">апр</text>
+        <circle cx="480.0" cy="129.5" r="3.5" fill="#0071e3"/>
+        <text x="480.0" y="149.5" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">2,43</text>
+        <text x="480.0" y="216" text-anchor="middle" class="t-label" font-size="12">май</text>
+        <circle cx="570.0" cy="133.8" r="3.5" fill="#0071e3"/>
+        <text x="570.0" y="123.8" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">2,27</text>
+        <text x="570.0" y="216" text-anchor="middle" class="t-label" font-size="12">июн</text>
+        <circle cx="660.0" cy="127.4" r="3.5" fill="#0071e3"/>
+        <text x="660.0" y="117.4" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">2,51</text>
+        <text x="660.0" y="216" text-anchor="middle" class="t-label" font-size="12">июл</text>
+        <circle cx="750.0" cy="136.7" r="3.5" fill="#0071e3"/>
+        <text x="750.0" y="126.7" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">2,16</text>
+        <text x="750.0" y="216" text-anchor="middle" class="t-label" font-size="12">авг</text>
+        <circle cx="840.0" cy="132.7" r="3.5" fill="#0071e3"/>
+        <text x="840.0" y="152.7" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">2,31</text>
+        <text x="840.0" y="216" text-anchor="middle" class="t-label" font-size="12">сен</text>
+        <circle cx="930.0" cy="88.4" r="4.5" fill="#0071e3"/>
+        <text x="930.0" y="78.4" text-anchor="middle" class="t-val" font-size="12" fill="#0071e3">3,98</text>
+        <text x="930.0" y="216" text-anchor="middle" class="t-label" font-size="12">окт</text>
+      </svg>
+    </div>
+<!--/CHART:google_roas-->
+
+    <div class="steps">
+      <div class="step"><div class="step-n">1</div><b>Правильная конверсия</b><p>Smart Bidding учится на серверном теге Shopify, а не на импорте GA4, который видел ~30% продаж.</p></div>
+      <div class="step"><div class="step-n">2</div><b>Стоп неокупаемому</b><p>Отключил авто-видео с 0 конверсий, дубли кампаний по гео и кампании с ДРР &gt; 100%.</p></div>
+      <div class="step"><div class="step-n">3</div><b>Новое гео</b><p>Эмираты вместо городов, режим «Присутствие».</p><span class="hl">ROAS 11,8</span></div>
+      <div class="step"><div class="step-n">4</div><b>Контроль креативов</b><p>Без автотекстов и ИИ-ссылок, несезонные товары исключены через фид.</p><span class="hl">Качество: «Хорошее»</span></div>
+      <div class="step"><div class="step-n">5</div><b>Масштаб ступенями</b><p>+15–25% бюджета раз в 2–3 дня, пока ROAS ≥ 2. Отдельная PMax на бестселлеры.</p><span class="hl">ROAS 5,6</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Кейс 2 — Awareness Meta и TikTok -->
+<section>
+  <div class="wrap">
+    <div class="case-head">
+      <div><div class="eyebrow">Кейс 2 · 12 STOREEZ</div><h2>Awareness Meta и TikTok: визит в 4,5 раза дешевле</h2></div>
+      <div class="tags"><span class="chip">Meta · TikTok</span><span class="chip">ОАЭ</span><span class="chip">Кувейт</span></div>
+    </div>
+    <div class="task"><span class="label">Задача</span>Повысить посещаемость сайта в 2 раза</div>
+
+    <div class="grid g3">
+      <div class="card"><h4>Стоимость визита</h4><div class="big">в 4,5 раза</div><div class="cap">дешевле</div></div>
+      <div class="card"><h4>Посетители</h4><div class="big">×3,5</div><div class="cap">больше визитов при бюджете на 22% меньше</div></div>
+      <div class="card"><h4>Блогерский контент</h4><div class="big">×4–11</div><div class="cap">выше CTR, клик на 46–70% дешевле</div></div>
+    </div>
+
+    <div class="card" style="margin-top:12px;">
+      <h4>CTR: обычные объявления → блогерские</h4>
+      <svg viewBox="0 0 640 190" aria-label="CTR: Meta ОАЭ 0,9% → 4,5%; Meta Кувейт 1,0% → 3,9%; TikTok ОАЭ 0,2% → 2,2%; TikTok Кувейт 0,26% → 2,1%">
+        <text x="0" y="30" class="t-label">Meta, ОАЭ</text>
+        <rect x="150" y="18" width="340" height="16" rx="5" fill="#0071e3"/><rect x="150" y="18" width="68" height="16" rx="5" fill="#c7c7cc"/>
+        <text x="498" y="31" class="t-val" fill="#1d1d1f">0,9% → 4,5%</text>
+        <text x="0" y="76" class="t-label">Meta, Кувейт</text>
+        <rect x="150" y="64" width="295" height="16" rx="5" fill="#0071e3"/><rect x="150" y="64" width="76" height="16" rx="5" fill="#c7c7cc"/>
+        <text x="453" y="77" class="t-val" fill="#1d1d1f">1,0% → 3,9%</text>
+        <text x="0" y="122" class="t-label">TikTok, ОАЭ</text>
+        <rect x="150" y="110" width="166" height="16" rx="5" fill="#0071e3"/><rect x="150" y="110" width="15" height="16" rx="5" fill="#c7c7cc"/>
+        <text x="324" y="123" class="t-val" fill="#1d1d1f">0,2% → 2,2%</text>
+        <text x="0" y="168" class="t-label">TikTok, Кувейт</text>
+        <rect x="150" y="156" width="159" height="16" rx="5" fill="#0071e3"/><rect x="150" y="156" width="20" height="16" rx="5" fill="#c7c7cc"/>
+        <text x="317" y="169" class="t-val" fill="#1d1d1f">0,26% → 2,1%</text>
+      </svg>
+      <div class="legend"><span><i style="background:#c7c7cc"></i>обычные объявления</span><span><i style="background:#0071e3"></i>блогерские</span></div>
+    </div>
+
+    <div class="steps s3">
+      <div class="step"><div class="step-n">1</div><b>Блогерский контент</b><p>Запустил ролики блогеров рядом с брендовыми креативами в Meta и TikTok.</p></div>
+      <div class="step"><div class="step-n">2</div><b>Запуск TikTok</b><p>С февраля 2026 — новый канал в ОАЭ и Кувейте.</p></div>
+      <div class="step"><div class="step-n">3</div><b>Страны и языки</b><p>Разделил кампании по странам, сделал арабские версии.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Кейс 3 — Продажи Meta -->
+<section class="alt">
+  <div class="wrap">
+    <div class="case-head">
+      <div><div class="eyebrow">Кейс 3 · 12 STOREEZ</div><h2>Продажи в Meta: вдвое меньше бюджета, почти тот же доход</h2></div>
+      <div class="tags"><span class="chip">Meta Ads</span><span class="chip">ОАЭ</span><span class="chip">Кувейт</span></div>
+    </div>
+    <div class="task"><span class="label">Задача</span>Достичь ROAS больше 1</div>
+
+    <div class="grid g3">
+      <div class="card"><h4>ROAS</h4><div class="big">0,61 → 1,85</div></div>
+      <div class="card"><h4>Конверсия в покупку</h4><div class="big">×2,1</div><div class="cap">выше</div></div>
+      <div class="card"><h4>Стоимость покупки</h4><div class="big">−48%</div><div class="cap">почти в 2 раза дешевле</div></div>
+    </div>
+
+    <div class="card" style="margin-top:12px;">
+      <h4>Было = 100</h4>
+      <svg viewBox="0 0 640 110" aria-label="Бюджет 100 → 47, доход 100 → 88">
+        <text x="0" y="28" class="t-label">Бюджет</text>
+        <rect x="150" y="16" width="300" height="16" rx="5" fill="#c7c7cc"/><text x="458" y="29" class="t-val" fill="#6e6e73">100</text>
+        <rect x="150" y="36" width="141" height="16" rx="5" fill="#0071e3"/><text x="299" y="49" class="t-val" fill="#0071e3">47</text>
+        <text x="0" y="78" class="t-label">Доход</text>
+        <rect x="150" y="66" width="300" height="16" rx="5" fill="#c7c7cc"/><text x="458" y="79" class="t-val" fill="#6e6e73">100</text>
+        <rect x="150" y="86" width="264" height="16" rx="5" fill="#0071e3"/><text x="422" y="99" class="t-val" fill="#0071e3">88</text>
+      </svg>
+      <div class="legend"><span><i style="background:#c7c7cc"></i>было</span><span><i style="background:#0071e3"></i>стало</span></div>
+    </div>
+<!--CHART:meta_roas-->
+    <div class="card" style="margin-top:12px;">
+      <h4>ROAS Meta по месяцам</h4>
+      <svg viewBox="0 0 960 240" aria-label="ROAS Meta по месяцам: фев 2026 0,61; мар 2026 0,78; апр 2026 1,15; май 2026 0,33; июн 2026 1,85; июл 2026 1,59">
+        <line x1="20" y1="194" x2="940" y2="194" stroke="#d2d2d7"/>
+        <line x1="20" y1="113.4" x2="940" y2="113.4" stroke="#0071e3" stroke-dasharray="4 4" opacity=".45"/>
+        <text x="120.0" y="105.4" text-anchor="middle" class="t-label" font-size="12">цель 1</text>
+        <polyline fill="none" stroke="#0071e3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" points="30.0,144.8 210.0,131.1 390.0,101.3 570.0,167.4 750.0,44.9 930.0,65.9"/>
+        <circle cx="30.0" cy="144.8" r="3.5" fill="#0071e3"/>
+        <text x="30.0" y="134.8" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">0,61</text>
+        <text x="30.0" y="216" text-anchor="middle" class="t-label" font-size="12">фев</text>
+        <text x="30.0" y="232" text-anchor="middle" class="t-label" font-size="11" fill="#86868b">2026</text>
+        <circle cx="210.0" cy="131.1" r="3.5" fill="#0071e3"/>
+        <text x="210.0" y="121.1" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">0,78</text>
+        <text x="210.0" y="216" text-anchor="middle" class="t-label" font-size="12">мар</text>
+        <circle cx="390.0" cy="101.3" r="3.5" fill="#0071e3"/>
+        <text x="390.0" y="91.3" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">1,15</text>
+        <text x="390.0" y="216" text-anchor="middle" class="t-label" font-size="12">апр</text>
+        <circle cx="570.0" cy="167.4" r="3.5" fill="#0071e3"/>
+        <text x="570.0" y="187.4" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">0,33</text>
+        <text x="570.0" y="216" text-anchor="middle" class="t-label" font-size="12">май</text>
+        <circle cx="750.0" cy="44.9" r="3.5" fill="#0071e3"/>
+        <text x="750.0" y="34.9" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">1,85</text>
+        <text x="750.0" y="216" text-anchor="middle" class="t-label" font-size="12">июн</text>
+        <circle cx="930.0" cy="65.9" r="4.5" fill="#0071e3"/>
+        <text x="930.0" y="55.9" text-anchor="middle" class="t-val" font-size="12" fill="#0071e3">1,59</text>
+        <text x="930.0" y="216" text-anchor="middle" class="t-label" font-size="12">июл</text>
+      </svg>
+    </div>
+<!--/CHART:meta_roas-->
+
+    <div class="steps s3">
+      <div class="step"><div class="step-n">1</div><b>Новые и повторные</b><p>Отдельные кампании на новых клиентов и ретаргетинг для ОАЭ и Кувейта.</p></div>
+      <div class="step"><div class="step-n">2</div><b>Тест аудиторий</b><p>Новинки на новую аудиторию против ретаргетинга по всему каталогу — ставка на новинки и коллекции.</p><span class="hl">ROAS 1,93 против 0,10</span></div>
+      <div class="step"><div class="step-n">3</div><b>Фокус на одной кампании</b><p>Одна продающая кампания под сейл: оптимизация на покупку, гео — Дубай и Шарджа.</p><span class="hl">Клик → покупка ×10</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Кейс 4 — Tanuki -->
+<section>
+  <div class="wrap">
+    <div class="case-head">
+      <div><div class="eyebrow">Кейс 4 · TanukiFamily</div><h2>ДРР в 9 раз ниже за 10 месяцев</h2></div>
+      <div class="tags"><span class="chip">Meta · Google · TikTok</span><span class="chip">Доставка еды</span><span class="chip">Казахстан</span></div>
+    </div>
+    <div class="task"><span class="label">Задача</span>ДРР менее 33%</div>
+
+    <div class="grid two-third" style="grid-template-columns:2fr 1fr;">
+      <div class="card">
+<!--CHART:tanuki_drr-->
+        <h4>ДРР Tanuki Казахстан, 2025</h4>
+      <svg viewBox="0 0 640 330" aria-label="ДРР Tanuki Казахстан по месяцам 2025: фев 221,7%; мар 65,3%; апр 59,6%; май 54,2%; июн 54,2%; июл 70,8%; авг 49,3%; сен 38,1%; окт 37,7%; ноя 30,5%; дек 24,6%">
+        <line x1="20" y1="284" x2="620" y2="284" stroke="#d2d2d7"/>
+        <line x1="20" y1="229.8" x2="620" y2="229.8" stroke="#0071e3" stroke-dasharray="4 4" opacity=".45"/>
+        <text x="291.0" y="246.8" text-anchor="middle" class="t-label" font-size="12">цель 33%</text>
+        <polyline fill="none" stroke="#0071e3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" points="30.0,30.0 88.0,158.2 146.0,167.8 204.0,177.7 262.0,177.7 320.0,149.7 378.0,187.7 436.0,214.7 494.0,215.8 552.0,238.0 610.0,260.6"/>
+        <circle cx="30.0" cy="30.0" r="3.5" fill="#0071e3"/>
+        <text x="30.0" y="20.0" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">221,7%</text>
+        <text x="30.0" y="306" text-anchor="middle" class="t-label" font-size="12">фев</text>
+        <text x="30.0" y="322" text-anchor="middle" class="t-label" font-size="11" fill="#86868b">2025</text>
+        <circle cx="88.0" cy="158.2" r="3.5" fill="#0071e3"/>
+        <text x="88.0" y="178.2" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">65,3%</text>
+        <text x="88.0" y="306" text-anchor="middle" class="t-label" font-size="12">мар</text>
+        <circle cx="146.0" cy="167.8" r="3.5" fill="#0071e3"/>
+        <text x="146.0" y="157.8" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">59,6%</text>
+        <text x="146.0" y="306" text-anchor="middle" class="t-label" font-size="12">апр</text>
+        <circle cx="204.0" cy="177.7" r="3.5" fill="#0071e3"/>
+        <text x="204.0" y="167.7" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">54,2%</text>
+        <text x="204.0" y="306" text-anchor="middle" class="t-label" font-size="12">май</text>
+        <circle cx="262.0" cy="177.7" r="3.5" fill="#0071e3"/>
+        <text x="262.0" y="197.7" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">54,2%</text>
+        <text x="262.0" y="306" text-anchor="middle" class="t-label" font-size="12">июн</text>
+        <circle cx="320.0" cy="149.7" r="3.5" fill="#0071e3"/>
+        <text x="320.0" y="139.7" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">70,8%</text>
+        <text x="320.0" y="306" text-anchor="middle" class="t-label" font-size="12">июл</text>
+        <circle cx="378.0" cy="187.7" r="3.5" fill="#0071e3"/>
+        <text x="378.0" y="177.7" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">49,3%</text>
+        <text x="378.0" y="306" text-anchor="middle" class="t-label" font-size="12">авг</text>
+        <circle cx="436.0" cy="214.7" r="3.5" fill="#0071e3"/>
+        <text x="436.0" y="234.7" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">38,1%</text>
+        <text x="436.0" y="306" text-anchor="middle" class="t-label" font-size="12">сен</text>
+        <circle cx="494.0" cy="215.8" r="3.5" fill="#0071e3"/>
+        <text x="494.0" y="205.8" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">37,7%</text>
+        <text x="494.0" y="306" text-anchor="middle" class="t-label" font-size="12">окт</text>
+        <circle cx="552.0" cy="238.0" r="3.5" fill="#0071e3"/>
+        <text x="552.0" y="228.0" text-anchor="middle" class="t-val" font-size="12" fill="#1d1d1f">30,5%</text>
+        <text x="552.0" y="306" text-anchor="middle" class="t-label" font-size="12">ноя</text>
+        <circle cx="610.0" cy="260.6" r="4.5" fill="#0071e3"/>
+        <text x="610.0" y="250.6" text-anchor="middle" class="t-val" font-size="12" fill="#0071e3">24,6%</text>
+        <text x="610.0" y="306" text-anchor="middle" class="t-label" font-size="12">дек</text>
+      </svg>
+<!--/CHART:tanuki_drr-->
+      </div>
+      <div class="grid" style="gap:12px;">
+        <div class="card"><div class="big">3% → 19%</div><div class="cap">доля платных заказов при росте органики</div></div>
+        <div class="card"><div class="big">−32 п.п.</div><div class="cap">ДРР за 2025 год</div></div>
+      </div>
+    </div>
+
+    <div class="steps s4">
+      <div class="step"><div class="step-n">1</div><b>Микс под бренд</b><p>Awareness / Performance: Tanuki 30/70, Каспийка 50/50, Bella Ciao 80/20.</p></div>
+      <div class="step"><div class="step-n">2</div><b>Меньше офферов</b><p>Календарь вместо хаоса, офферы не короче 7 дней.</p><span class="hl">25+ → 7–10 в месяц</span></div>
+      <div class="step"><div class="step-n">3</div><b>Видео и UGC</b><p>Вместо баннеров — ролики блогеров и блюда крупным планом, 3–5 креативов в кампании.</p></div>
+      <div class="step"><div class="step-n">4</div><b>Точная аналитика</b><p>Очистка дублей last click в paid / organic. Сквозная аналитика по каждому ресторану, источнику и типу РК в Claude AI.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Кейс 5 — OAOK -->
+<section class="alt">
+  <div class="wrap">
+    <div class="case-head">
+      <div><div class="eyebrow">Кейс 5 · OAOK</div><h2>Маркетплейс 3D-моделей: GMV +290% за 12 месяцев</h2></div>
+      <div class="tags"><span class="chip">Яндекс Директ · VK · Telegram Ads</span><span class="chip">SEO</span></div>
+    </div>
+    <div class="task"><span class="label">Задача</span>Рост продаж и регистраций при снижении стоимости привлечения</div>
+
+    <div class="grid g4">
+      <div class="card"><h4>GMV</h4><div class="big">+290%</div><div class="cap">январь → декабрь</div></div>
+      <div class="card"><h4>Продажи</h4><div class="big">×5</div><div class="cap">48 → 239 в месяц</div></div>
+      <div class="card"><h4>Регистрации с SEO</h4><div class="big">+159%</div><div class="cap">116 → 300 в месяц</div></div>
+      <div class="card"><h4>CPL</h4><div class="big">−83%</div><div class="cap">стоимость регистрации</div></div>
+    </div>
+
+<!--CHART:oaok-->
+    <div class="grid g2" style="margin-top:12px;">
+      <div class="card">
+        <h4>Регистрации с SEO · <span style="color:#0071e3">+159% за 12 месяцев</span></h4>
+      <svg viewBox="0 0 460 200" aria-label="Регистрации с SEO по месяцам, январь → декабрь: +159%">
+        <line x1="20" y1="154" x2="440" y2="154" stroke="#d2d2d7"/>
+        <polyline fill="none" stroke="#0071e3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" points="30.0,114.3 66.4,118.7 102.7,108.1 139.1,108.1 175.5,102.6 211.8,99.5 248.2,85.1 284.5,89.9 320.9,69.4 357.3,71.1 393.6,41.3 430.0,51.2"/>
+        <circle cx="30.0" cy="114.3" r="3.5" fill="#0071e3"/>
+        <text x="30.0" y="176" text-anchor="middle" class="t-label" font-size="12">янв</text>
+        <circle cx="66.4" cy="118.7" r="3.5" fill="#0071e3"/>
+        <text x="66.4" y="176" text-anchor="middle" class="t-label" font-size="12">фев</text>
+        <circle cx="102.7" cy="108.1" r="3.5" fill="#0071e3"/>
+        <text x="102.7" y="176" text-anchor="middle" class="t-label" font-size="12">мар</text>
+        <circle cx="139.1" cy="108.1" r="3.5" fill="#0071e3"/>
+        <text x="139.1" y="176" text-anchor="middle" class="t-label" font-size="12">апр</text>
+        <circle cx="175.5" cy="102.6" r="3.5" fill="#0071e3"/>
+        <text x="175.5" y="176" text-anchor="middle" class="t-label" font-size="12">май</text>
+        <circle cx="211.8" cy="99.5" r="3.5" fill="#0071e3"/>
+        <text x="211.8" y="176" text-anchor="middle" class="t-label" font-size="12">июн</text>
+        <circle cx="248.2" cy="85.1" r="3.5" fill="#0071e3"/>
+        <text x="248.2" y="176" text-anchor="middle" class="t-label" font-size="12">июл</text>
+        <circle cx="284.5" cy="89.9" r="3.5" fill="#0071e3"/>
+        <text x="284.5" y="176" text-anchor="middle" class="t-label" font-size="12">авг</text>
+        <circle cx="320.9" cy="69.4" r="3.5" fill="#0071e3"/>
+        <text x="320.9" y="176" text-anchor="middle" class="t-label" font-size="12">сен</text>
+        <circle cx="357.3" cy="71.1" r="3.5" fill="#0071e3"/>
+        <text x="357.3" y="176" text-anchor="middle" class="t-label" font-size="12">окт</text>
+        <circle cx="393.6" cy="41.3" r="3.5" fill="#0071e3"/>
+        <text x="393.6" y="176" text-anchor="middle" class="t-label" font-size="12">ноя</text>
+        <circle cx="430.0" cy="51.2" r="4.5" fill="#0071e3"/>
+        <text x="430.0" y="176" text-anchor="middle" class="t-label" font-size="12">дек</text>
+      </svg>
+      </div>
+      <div class="card">
+        <h4>GMV · <span style="color:#0071e3">+290% за 12 месяцев</span></h4>
+      <svg viewBox="0 0 460 200" aria-label="GMV по месяцам, январь → декабрь: +290%">
+        <line x1="20" y1="154" x2="440" y2="154" stroke="#d2d2d7"/>
+        <polyline fill="none" stroke="#0071e3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" points="30.0,125.1 66.4,102.9 102.7,87.7 139.1,75.5 175.5,94.3 211.8,118.1 248.2,92.8 284.5,105.2 320.9,99.9 357.3,89.6 393.6,59.3 430.0,41.3"/>
+        <circle cx="30.0" cy="125.1" r="3.5" fill="#0071e3"/>
+        <text x="30.0" y="176" text-anchor="middle" class="t-label" font-size="12">янв</text>
+        <circle cx="66.4" cy="102.9" r="3.5" fill="#0071e3"/>
+        <text x="66.4" y="176" text-anchor="middle" class="t-label" font-size="12">фев</text>
+        <circle cx="102.7" cy="87.7" r="3.5" fill="#0071e3"/>
+        <text x="102.7" y="176" text-anchor="middle" class="t-label" font-size="12">мар</text>
+        <circle cx="139.1" cy="75.5" r="3.5" fill="#0071e3"/>
+        <text x="139.1" y="176" text-anchor="middle" class="t-label" font-size="12">апр</text>
+        <circle cx="175.5" cy="94.3" r="3.5" fill="#0071e3"/>
+        <text x="175.5" y="176" text-anchor="middle" class="t-label" font-size="12">май</text>
+        <circle cx="211.8" cy="118.1" r="3.5" fill="#0071e3"/>
+        <text x="211.8" y="176" text-anchor="middle" class="t-label" font-size="12">июн</text>
+        <circle cx="248.2" cy="92.8" r="3.5" fill="#0071e3"/>
+        <text x="248.2" y="176" text-anchor="middle" class="t-label" font-size="12">июл</text>
+        <circle cx="284.5" cy="105.2" r="3.5" fill="#0071e3"/>
+        <text x="284.5" y="176" text-anchor="middle" class="t-label" font-size="12">авг</text>
+        <circle cx="320.9" cy="99.9" r="3.5" fill="#0071e3"/>
+        <text x="320.9" y="176" text-anchor="middle" class="t-label" font-size="12">сен</text>
+        <circle cx="357.3" cy="89.6" r="3.5" fill="#0071e3"/>
+        <text x="357.3" y="176" text-anchor="middle" class="t-label" font-size="12">окт</text>
+        <circle cx="393.6" cy="59.3" r="3.5" fill="#0071e3"/>
+        <text x="393.6" y="176" text-anchor="middle" class="t-label" font-size="12">ноя</text>
+        <circle cx="430.0" cy="41.3" r="4.5" fill="#0071e3"/>
+        <text x="430.0" y="176" text-anchor="middle" class="t-label" font-size="12">дек</text>
+      </svg>
+      </div>
+    </div>
+<!--/CHART:oaok-->
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Кирилл Кондаков · Performance Manager · <a href="https://t.me/kirill_kondakov">@kirill_kondakov</a> · <a href="mailto:171kondakov@gmail.com">171kondakov@gmail.com</a></span>
+    <span>Бюджеты скрыты по NDA — показаны относительные значения.</span>
+  </div>
+</footer>
+</body>
+</html>
